@@ -1,0 +1,383 @@
+/* initialisation globale */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* ????*/
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Satoshi', sans-serif;
+  background-color: aqua;
+  background: #080808;
+  padding: 0;
+  margin: 20px;
+  color: white;
+  text-align: center;
+}
+
+.header-hero {
+  display: flex;
+  flex-direction: column;
+}
+.header-hero__menu {
+  display: none;
+}
+.header-hero__link,
+.header-hero__menu-item {
+  text-decoration: none;
+  color: white;
+}
+
+.header-hero__link {
+  font-size: 0.7em;
+  font-weight: bold;
+}
+
+.header-hero__container2 {
+  background: url('../ressources/images/hero-banner.png') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* La hauteur fait 50% de la hauteur de l'écran */
+  height: 50vh;
+  border-radius: 10px;
+}
+
+/* --------------- main-------*/
+.hero-zone__services-title {
+  font-size: 1.5rem;
+  padding: 30px 0 20px 0;
+  font-weight: bold;
+}
+
+.hero-zone__services-title--highlight {
+  color: #a29bfe;
+}
+
+.hero-zone__container {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.hero-zone__service-item {
+  border: 1px solid #6d69ac;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  /* Définit l'espace entre les éléments enfants */
+  gap: 1rem;
+}
+
+.hero-zone__service-title {
+  color: #a29bfe;
+  font-size: 1.3rem;
+}
+
+.hero-zone__service-description {
+  text-transform: uppercase;
+  line-height: 1.5em;
+  font-size: 0.8rem;
+}
+
+.hero-zone__service-price {
+  background-color: #a29bfe;
+  margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.hero-zone__service-note {
+  font-size: 0.6rem;
+  line-height: 1.2em;
+  margin-top: 20px;
+  font-weight: normal;
+}
+
+/* zone supers heros--------- */
+.hero-zone__supers-heros {
+  max-width: 100%;
+  height: 30vh;
+  position: relative;
+}
+
+.hero-zone__text {
+  background-color: rgba(54, 53, 53, 0.5);
+
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  padding: 50px 20px 10px 20px;
+  line-height: 2em;
+}
+
+.hero-zone__supers-heros-title {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.hero-zone__supers-heros-note {
+}
+
+.hero-zone__supers-heros-detail {
+  display: none;
+}
+
+.hero-zone__supers-heros--catastrophic {
+  background: url('../ressources/images/catastrophic.png') center/cover
+    no-repeat;
+}
+
+.hero-zone__supers-heros--carotte {
+  background: url('../ressources/images/carotte-woman.png') center/cover
+    no-repeat;
+}
+
+.hero-zone__supers-heros--ultraquenarde {
+  background: url('../ressources/images/ultraquenarde.png') center/cover
+    no-repeat;
+}
+
+.hero-zone__supers-heros--poulpy {
+  background: url('../ressources/images/poulpy.png') center/cover no-repeat;
+}
+
+.hero-zone__supers-heros--orang {
+  background: url('../ressources/images/oran-wu-tang-clan.png') center/cover
+    no-repeat;
+}
+
+.hero-zone__supers-heros--superime {
+  background: url('../ressources/images/superime.png') center/cover no-repeat;
+}
+
+/* zone témoignages */
+
+.hero-zone__services--temoignages {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.hero-zone__temoignages-zone {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  line-height: 1.6em;
+}
+
+.hero-zone__temoignages-zone {
+  background-color: #8a84d8;
+  border-radius: 40px;
+}
+
+.hero-zone__picture {
+  border: 12px solid #a29bfe;
+  border-radius: 0 0 50% 50%; /* Coins inférieurs arrondis */
+  max-width: 100%;
+}
+
+.hero-zone__temoignages-title {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.hero-zone__temoignages-note {
+  padding: 0 50px 20px;
+  font-size: 1.3em;
+  font-style: italic;
+}
+
+/* zone formulaire */
+.hero-zone__form-sauvezMoi {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.hero-zone__champ {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+}
+
+.hero-zone__label {
+  font-weight: bold;
+}
+
+.hero-zone__input {
+  background-color: #4d4d4d;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.hero-zone__option {
+  color: white;
+}
+
+.hero-zone__service-price {
+  color: white;
+}
+
+/* footer------------------ */
+
+.footer-hero {
+  background-color: #856cff;
+  margin-top: 40px;
+  border-radius: 30% 30% 0 0;
+  padding: 10px;
+}
+
+.footer-hero__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0 30px 0;
+}
+
+.footer-hero_title {
+  font-size: 2em;
+}
+
+.footer-hero__menu-item {
+  text-decoration: none;
+  color: white;
+}
+
+/* Pour écrans de tablette ------------------*/
+@media (min-width: 768px) {
+  body {
+    background-color: pink; /* Test visible */
+  }
+  .footer-hero__menu {
+    flex-direction: row;
+    justify-content: center;
+  }
+  /* -- */
+  .hero-zone__temoignages-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 20px;
+  }
+
+  .hero-zone__picture {
+    border-radius: 100%;
+  }
+
+  /* -- */
+
+  .hero-zone__container-superHeros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    border-radius: 10px;
+  }
+
+  .hero-zone__supers-heros {
+    border-radius: 20px;
+  }
+
+  /* -- */
+  .hero-zone__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      'zone1 zone2'
+      'zone3 zone4'
+      'zone5 zone5';
+
+    gap: 10px;
+  }
+  .hero-zone__service-item--demenagement {
+    grid-area: zone1;
+  }
+  .hero-zone__service-item--repas {
+    grid-area: zone2;
+  }
+  .hero-zone__service-item--bouchons {
+    grid-area: zone3;
+  }
+  .hero-zone__service-item--soirée {
+    grid-area: zone4;
+  }
+  .hero-zone__service-item--zheros {
+    grid-area: zone5;
+  }
+
+/* -- */
+.header-hero__menu {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.header-hero__menu-item {
+  margin: 10px;
+}
+
+.header-hero__link {
+  font-size: 2rem;
+}
+}
+/* pour les écrans de PC ----------------------*/
+@media only screen and (min-width: 1024px) {
+  .header-hero__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 35px 0;
+  }
+
+  .header-hero__menu {
+    padding: 0px;
+  }
+  .header-hero__container2 {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header-hero__title {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .hero-header__description {
+    font-size: 1.3rem;
+  }
+
+  /* ---------- */
+  /* à revoir */
+  .hero-zone__form-sauvezMoi {
+    width: 800%;
+    margin: auto;
+  }
+
+  .hero-zone__temoignages-container {
+    display: flex;
+    font-size: 0.6rem;
+  }
+
+  .hero-zone__temoignages-note {
+    padding: 10px;
+  }
+}
+
