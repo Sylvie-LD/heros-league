@@ -1,3 +1,9 @@
+/* 
+html font-size: 62.5% /* taille par défaut du navigateur = 16px donc 16px*62.5% = 10px pour 1 rem pour simplifier les calculs
+  ; 
+Height en vh pour s'adapter à la hauteur de l'écran
+ */
+
 /* ====== Styles de base ====== */
 * {
   box-sizing: border-box;
@@ -7,7 +13,7 @@
 
 html {
   scroll-behavior: smooth; /* ????*/
-  font-size: 62.5%; /* 1rem = 10px */
+  font-size: 62.5%; 
 }
 
 body {
@@ -27,6 +33,7 @@ body {
   margin: 0 auto; /* Centrage horizontal */
   padding: 0 1rem; /* Ajoute un padding pour éviter que le contenu touche les bords */
   box-sizing: border-box; /* Assure que padding/margin ne déborde pas */
+  max-width: 1200px; /* Limite pour les grands écrans */
 }
 
 /* ====== HEADER ====== */
@@ -43,20 +50,24 @@ body {
   background-repeat: no-repeat;
   /* Pour le focus */
   background-size: 387%;
-  height: 1350px;
+  height: 100vh;
   /* Pour que le fond ne bouge pas */
   background-attachment: scroll; /* Fond fixe */
-  border-radius: 10px;
+  border-radius: 1rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap :2rem;
   margin: auto;
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+
 }
 
 .header-hero__title {
-  font-size: 1rem;
+  font-size: 6rem;
 }
 
 .header-hero__link {
@@ -112,7 +123,7 @@ body {
 .hero-zone__service-item {
   border: 1px solid #6d69ac;
   border-radius: 1rem;
-  padding: 1.5rem; /* Conversion px -> rem */
+  padding: 1.5rem; 
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
@@ -126,17 +137,18 @@ body {
 
 .hero-zone__service-title {
   color: #a29bfe;
-  font-size: 1.6rem;
+  font-size: 2.6rem;
 }
 
 .hero-zone__service-description {
   text-transform: uppercase;
   line-height: 1.5;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+
 }
 
 .hero-zone__service-note {
-  font-size: 1rem; /* 0.6rem -> 1rem pour la lisibilité */
+  font-size: 1.3rem; /* 0.6rem -> 1rem pour la lisibilité */
   line-height: 1.2;
   margin-top: 2rem;
   font-weight: normal;
@@ -157,20 +169,20 @@ body {
 }
 
 .hero-zone__supers-heros:hover .hero-zone__supers-heros-detail {
-
  opacity :1;
  display : block;
   }
 
 .hero-zone__supers-heros-detail {
   position : absolute;
-  top: -153px;
-  left: 0px; 
-  right: 0px;
-  bottom: 220px;
+  top: 0vh;
+  bottom: 35vh;
+  margin : 0vh;
+  left:0vh;
+  right:0vh;
   
   background-color:rgba(146, 147, 212, 0.5);
-  opacity :0; 
+  opacity :0;  
  display :none; 
   /* transition sur opacity pdt 1s et visibility pdt 5sec*/
   transition: opacity 1s ease-in-out, visibility 5s 0.3s;  
@@ -180,8 +192,8 @@ body {
   background-color: rgba(54, 53, 53, 0.5);
   text-align: center;
   position: absolute;
-  position :relative;
-  top: 45%;
+  /* position :relative; */
+  top: 20vh;
   width: 100%;
   padding: 3.3rem 2rem 1rem 2rem;
   line-height: 1.5;
@@ -195,6 +207,9 @@ body {
 .hero-zone__supers-heros-note {
   font-size: 1.2em;
   color: rgba(255, 255, 255, 0.6); /* Plus de transparence pour la note */
+  /* top :10vh;
+  bottom :10vh;
+  position:absolute; */
 }
 
 
@@ -234,9 +249,11 @@ body {
   border-radius: 2rem;
   color: white;
   font-size: 1.4rem;
-  margin-top: 30px;
+  margin-top: 3rem;
   text-transform: uppercase;
   font-weight: bold;
+  text-shadow: 4px 2px 3px rgba(0, 0, 0, 0.7); /* Ombre floue */
+
 }
 
 .hero-zone__service-price:hover {
@@ -283,7 +300,10 @@ body {
 .hero-zone__picture {
   border: 1.2rem solid #a29bfe;
   border-radius: 0 0 50% 50%; /* Coins inférieurs arrondis */
-  max-width: 100%;
+  /* max-width: 100%; */
+  width: 100%;
+  height: auto;
+  max-width: 709px; 
 }
 
 .hero-zone__temoignages-title {
@@ -293,7 +313,7 @@ body {
 
 .hero-zone__temoignages-note {
   padding: 0 5rem 2rem;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-style: italic;
 }
 
@@ -354,7 +374,7 @@ body {
   background-color: #856cff;
   margin-top: 4rem;
   border-radius: 30% 30% 0 0;
-  padding: 10px;
+  padding: 1rem;
 }
 
 .footer-hero__menu {
@@ -390,9 +410,9 @@ body {
 /* ------------------------------ */
 
 @media (min-width: 768px) {
-  .container {
+  /* .container {
     max-width: 500px;
-  }
+  } */
 
   body {
     /*background-color: pink; */
@@ -401,11 +421,11 @@ body {
   .header-hero__menu {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 2rem;
   }
 
   .header-hero__menu-item {
-    margin: 10px;
+    margin: 1rem;
   }
 
   .header-hero__link {
@@ -413,30 +433,20 @@ body {
   }
 
   .header-hero__container-header {
-    background: url("../ressources/images/hero-banner.png");
-    /* pour avoir le morceau d'image : */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* height: 90vh; */
-    /* max-width: 430px; */
-
-    /* réglage de l'image : */
-    background-position: 50% 60%;
-    height: 54vh;
+    /* Pour le focus */
+    background-size: 169%;
+    height: 100vh;
   }
 
   .header-hero__title {
-    font-size: 3.4rem; /* Augmente légèrement pour la tablette */
+    font-size: 5rem; 
     font-weight: bold; /* Accentue la hiérarchie visuelle */
   }
 
   .header-hero__description {
-    font-size: 1.4rem; /* Plus petit que le titre mais toujours lisible */
-
+    font-size: 2rem; 
     margin-top: 3rem; /* Ajoute un espace avant les autres éléments */
-
-    line-height: 0.5; /* 1.5 fois la taille de la police */
+    
   }
 
   /* ----- services ----- 768 ----- */
@@ -477,7 +487,7 @@ body {
   }
 
   .hero-zone__supers-heros {
-    border-radius: 20px;
+    border-radius: 2rem;
     height: 20vh;
     display : flex;
     flex-direction:column-reverse;
@@ -492,39 +502,47 @@ body {
   }
 
   .hero-zone__text{
-    top :69%;
-    position :static
-    ;}
+    top :9vh;
+        ;}
     
     .hero-zone__supers-heros-detail {
+      margin : 0rem;
       font-size: 0.5em;
-      top : 1em;
-      bottom : 16em;
+      bottom : 17vh;
     }
 
   /* ----- temoignages ----- 768 ----- */
   .hero-zone__temoignages-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 100%;
-    gap: 20px;
-  }
+    gap: 2rem;
+    width: 100%; /* Largeur adaptative du conteneur */
+   margin : auto;
+     }
 
   .hero-zone__picture {
-    border-radius: 100%;
-  }
+    object-fit: cover; /* Remplit la zone sans déformation */
+    border-radius: 50%; 
+    height: min(50vw, 409px); 
+}
+
+.hero-zone__temoignages-zone {
+  justify-content: flex-start;
+  border-radius: 50% 50% 10% 10% ;
+  width :100%
+   }
 
   .hero-zone__temoignages-note {
-    font-size: 0.8rem;
-    padding: 0 10px 10px 20px;
-  }
+    font-size: 1.3rem;
+    padding: 0 1rem 1rem 2rem;
+     }
 
   /* ----- footer ----- 768 ----- */
   .footer-hero__menu {
     flex-direction: row;
     justify-content: center;
   }
-}
+
 
 /* ---------- MQ 1200px ---------- */
 @media only screen and (min-width: 1024px) {
@@ -539,11 +557,11 @@ body {
   .header-hero__container {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0 35px 0;
+    padding: 1rem 0 3.5rem 0;
   }
 
   .header-hero__menu {
-    padding: 0px;
+    padding: 0;
   }
   .header-hero__container-header {
     background-size: contain;
@@ -558,7 +576,7 @@ body {
   .header-hero__title {
     font-size: 3rem;
     font-weight: bold;
-    padding: 50px;
+    padding: 5rem;
   }
 
   .hero-header__description {
@@ -599,8 +617,8 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
-    border-radius: 10px;
+    gap: 2rem;
+    
   }
 
     .hero-zone__supers-heros {
@@ -617,32 +635,42 @@ body {
      } 
 
      .hero-zone__text{
-      top :69%;
-      position :static
-      ;}
+      top :16vh;
+          ;}
       
      .hero-zone__supers-heros-note {
       font-size: 0.8em;
+      
        } 
         
       .hero-zone__supers-heros-detail {
           font-size: 1em;
-          top : 1em;
-          bottom : 10em;
-          /* background-color: #856cff; */
+          top : 0;
+          bottom : 24vh;
+        
         }
 
   /* témoignages */
   .hero-zone__temoignages-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
     gap: 40px;
   }
 
-  .hero-zone__temoignages-zone {
-    padding: 10px;
-    border-radius: 10rem 10rem 4rem 4rem;
+  .hero-zone__temoignages-container {
+    width: 100%; /* Largeur adaptative du conteneur */
+     }
+
+  .hero-zone__picture {
+    object-fit: cover; /* Remplit la zone sans déformation */
+   /* border-radius: 50%;     */
+    height: auto; 
+    aspect-ratio: 1 / 1; /* Maintient un rapport largeur/hauteur fixe (cercle parfait) */
+  }
+
+ .hero-zone__temoignages-zone {
+    border-radius: 21rem 21rem 4rem 4rem;
+    justify-content: flex-start;
   }
 
   .hero-zone__temoignages-note{
@@ -654,4 +682,14 @@ body {
   .hero-zone__form-sauvezMoi {
     max-width : 500px;
   }
+
+
+
+
+
+
+
+
+
+
 }
