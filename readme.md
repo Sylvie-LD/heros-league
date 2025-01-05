@@ -1,63 +1,62 @@
-# Heros League a besoin de toi !
+# Heros League
 
-**Heros League&trade;** est une société de mise à disposition de **super-héros** pour des situations d'urgence en tout genre. Nous avons besoin de toi pour créer un site web qui permettra de présenter nos différents services et de pouvoir lancer un appel à l'aide.
+## Origine du projet
 
-Pour l'instant ce n'est qu'**une page d'accueil**, mais on te recontactera rapidement pour **ajouter de nouvelles fonctionnalités.**
+Ce projet est un exercice d'apprentissage. A l'orgine il a été proposé par l'école O'clock. Les consignes se trouvent dans le dossier ressources.
 
-**Prêt à servir la League ?** :muscle: :rocket:
+## Description du projet
 
-Tu trouveras dans les **ressources** tout ce dont tu as besoin pour réaliser ce projet.
+Heros League est un site web fictif conçu pour promouvoir les services et les super-héros uniques d'une organisation imaginée. Ce projet sert de pratique pour le développement web, en mettant en œuvre les bases du HTML, CSS et l'adaptation responsive.
 
-## Consignes
+### Fonctionnalités principales :
 
-- La police d'écriture est celle-ci : [Satoshi](https://www.fontshare.com/?q=Satoshi)
-  - Le designer nous a dit qu'il y avait pas mal de graisses différentes à prendre
-- Pour les couleurs, on ne les a plus sous la main, mais on imagine que tu trouveras un moyen de les récupérer :wink:
-- N'hésite pas à prendre la maquette de la home et la glisser / déposer dans ton navigateur pour la voir comme si c'était le site web (appuie sur la maquette dans le navigateur pour la zoomer à la largeur de l'écran)
-- Les liens du menus doivent être des ancres qui pointent vers la section correspondante
-- La première section avec la grande image doit prendre tout l'espace disponible dans la hauteur de l'écran (et ne pas dépasser !)
-- Au survol d'un héro, un texte supplémentaire doit apparaître par dessus l'image (voir maquette). Petit détail, le texte doit apparaître par le haut de l'image
-- Il y a un bouton pour voir plus de héros mais pour le moment il n'y a pas de page de prévue par le designer, donc renseigne "#" en lien, on verra plus tard !
-- Sinon tu es libre de faire comme tu veux, tant que ça ressemble à la maquette ! :smile:
+- Une page d'accueil avec un menu de navigation.
 
-## Maquette globale
+- Une section présentant des services variés, tels que le « Super Déménagement » et « Livraison de repas ».
+
+- Une galerie de super-héros avec des descriptions amusantes.
+
+- Une section de témoignages clients.
+
+- Un formulaire permettant aux utilisateurs de demander de l'aide.
+
+## Objectifs du projet
+
+- Apprendre les bases du développement web : structure HTML et stylisation avec CSS.
+- Pratiquer les concepts de responsive design avec des media queries. Utiliser le mobile first.
+- Mettre en pratique l'utilisation des grilles CSS
+- Comprendre l’organisation d’un projet web.
+
+## Technologies utilisées
+
+- HTML5 : pour structurer la page.
+
+- CSS3 : pour styliser les différents éléments et rendre le site responsive.
+
+- Google Fonts : pour la typographie (Satoshi).
+
+## Installation
+
+1. Cloner le repertoire
+
+```
+
+git clone https://github.com/votre-utilisateur/heros-league.git
+
+```
+
+2. Naviguer dans le dossier :
+
+```
+cd heros-league
+```
+
+## Difficultés rencontrées
+
+- Le mobile first : faire les sections les unes après les autres pour chaque taille d'écran
+- Comprendre le fonctionnement des tailles : rem, em, px, vh
+- Positionner les images
+
+## Aperçu du site
 
 ![Home](./ressources/home.png)
-
-### Header
-
-Le menu doit passer par dessus le contenu au scroll.
-
-![Header](./ressources/header.png)
-
-## Hovers
-
-### Menu
-
-![Menu](./ressources/menu-hover.png)
-
-### Héros
-
-![Héros](./ressources/hover-hero.png)
-
-### Bouton
-
-![Bouton](./ressources/button-hover.png)
-
-### Footer menu 
-
-![Footer menu](./ressources/footer-menu-hover.png)
-
-## Input Focus Outline
-
-![Input Focus Outline](./ressources/input-focus.png)
-
-## Responsive
-
-### Tablette
-
-![Tablette](./ressources/home-tablet.png)
-
-### Mobile
-
-![Mobile](./ressources/home-phone.png)

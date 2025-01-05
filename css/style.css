@@ -351,7 +351,7 @@ body {
 /* Ajout d'une mise en surbrillance des champs de formulaire lors de leur sélection pour améliorer l'expérience utilisateur */
 .hero-zone__input:focus {
   border: 3px solid #856cff;
-  outline : none
+  outline : none;
 }
 
 .hero-zone__option {
@@ -365,6 +365,8 @@ body {
 
 .btn-form:hover {
   background-color: #726DB2;
+  transition: border-color 1s ease, background-color 1s ease;
+
 }
 
 
